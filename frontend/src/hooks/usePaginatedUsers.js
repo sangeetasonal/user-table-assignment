@@ -11,7 +11,7 @@ export default function usePaginatedUsers() {
     if (loading || !hasMore) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000/api/users?page=${page}&limit=50`);
+      const res = await axios.get(`https://user-table-assignment.onrender.com/api/users?page=${page}&limit=50`);
       if (res.data.data.length > 0) {
         setUsers(prev => [...prev, ...res.data.data]);
         setPage(prev => prev + 1);
