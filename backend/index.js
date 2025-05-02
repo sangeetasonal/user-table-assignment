@@ -5,8 +5,9 @@ import { router as usersRouter } from './routes/users.js';
 
 const app = express();
 app.use(cors());
+
 app.get("/", (req, res) => {
-  res.send(" Server is working!!!!!!");
+  res.send(" Server is working!!!!");
 });
 
 app.use("/api/users", usersRouter);
